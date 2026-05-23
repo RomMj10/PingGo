@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bnph22r7bb15i"]
+
+[node name="main" type="Control" unique_id=665218534]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="ColorRect" parent="." unique_id=1721461758]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.16871345, 0.15543315, 0.15543315, 1)
+
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=712658104]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+split_offsets = PackedInt32Array(80, -200)
+drag_area_highlight_in_editor = true
+split_offset = 80
+
+[node name="sidebar" type="Panel" parent="HSplitContainer" unique_id=430610440]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/sidebar" unique_id=1116118978]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlowCont" type="HFlowContainer" parent="HSplitContainer" unique_id=2141338038]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/FlowCont" unique_id=94781883]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="spacer2" type="Control" parent="HSplitContainer/FlowCont/VBoxContainer" unique_id=592520908]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="url_box" type="HBoxContainer" parent="HSplitContainer/FlowCont/VBoxContainer" unique_id=1521463811]
+layout_mode = 2
+
+[node name="method_option" type="OptionButton" parent="HSplitContainer/FlowCont/VBoxContainer/url_box" unique_id=1554293154]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "POST"
+popup/item_0/id = 0
+popup/item_1/text = "GET"
+popup/item_1/id = 1
+popup/item_2/text = "DELETE"
+popup/item_2/id = 2
+popup/item_3/text = "PATCH"
+popup/item_3/id = 3
+
+[node name="lineedit_url" type="LineEdit" parent="HSplitContainer/FlowCont/VBoxContainer/url_box" unique_id=853099205]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Enter Url"
+
+[node name="btn_send" type="Button" parent="HSplitContainer/FlowCont/VBoxContainer/url_box/lineedit_url" unique_id=2021927740]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "SEND"
+
+[node name="spacer" type="Control" parent="HSplitContainer/FlowCont/VBoxContainer" unique_id=1745551308]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="response_tab" type="Control" parent="HSplitContainer" unique_id=1378350419]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="HSplitContainer/response_tab" unique_id=1402179216]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
